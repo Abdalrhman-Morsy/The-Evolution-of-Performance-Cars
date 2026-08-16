@@ -20,7 +20,7 @@
 
 - The performance cars space has seen several changes across time due to advancements in the car-related fields, aero-space, metallurgy, electrical engineering, etc...
 - Also, as the political conditions, environmental regulations, the needs and demands of the customers themselves change over time, the car industry in general tries to follow and meet these demands.
-- That might not be to the liking of the pur car enthusiasts, for example, following the tightly restrictive emission regulations has played a vital role in downsizing engine sizes, but at the same time has pushed the industry to build more efficient engines, and explore more ways to increase power. That comes at the cost of car price, making it less accessible for the average income enthusiast.
+- That might not be to the liking of the pure car enthusiasts, for example, following the tightly restrictive emission regulations has played a vital role in downsizing engine sizes, but at the same time has pushed the industry to build more efficient engines, and explore more ways to increase power. That comes at the cost of car price, making it less accessible for the average income enthusiast.
 - The demands of the customers for more SUVs, and more in general, played a role in changing the manufacturers' plans on how their portfolio should be.
 
 We will examine how the performance segment has changed over time as a response of the external factors.
