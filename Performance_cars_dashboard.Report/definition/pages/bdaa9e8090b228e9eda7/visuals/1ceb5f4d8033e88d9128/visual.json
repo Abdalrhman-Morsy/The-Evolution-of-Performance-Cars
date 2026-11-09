@@ -1,0 +1,170 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "1ceb5f4d8033e88d9128",
+  "position": {
+    "x": 506.74772036474167,
+    "y": 121.58054711246201,
+    "z": 4000,
+    "height": 298.60182370820672,
+    "width": 388.08510638297872,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "violinPlot4D46EB9EB3A141D9BA2289793175D971",
+    "query": {
+      "queryState": {
+        "category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim Class"
+                    }
+                  },
+                  "Property": "Class"
+                }
+              },
+              "queryRef": "Dim Class.Class",
+              "nativeQueryRef": "Class"
+            }
+          ]
+        },
+        "measure": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "MED 0-60"
+                }
+              },
+              "queryRef": "_Measures.MED 0-60",
+              "nativeQueryRef": "MED 0-60"
+            }
+          ]
+        },
+        "sampling": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_ Fact_Cars"
+                    }
+                  },
+                  "Property": "Car ID"
+                }
+              },
+              "queryRef": "_ Fact_Cars.Car ID",
+              "nativeQueryRef": "Car ID"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "dataColours": [
+        {
+          "properties": {
+            "defaultFillColour": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#cccccc'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'0-60 times by Category'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.4
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

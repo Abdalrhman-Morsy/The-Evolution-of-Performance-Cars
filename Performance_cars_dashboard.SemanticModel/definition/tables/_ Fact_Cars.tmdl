@@ -1,0 +1,449 @@
+table '_ Fact_Cars'
+	lineageTag: dabb4825-14fe-420e-b81d-04b054a3792e
+
+	column 'Car ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 73786314-6b97-44f5-9e1b-1d175000892d
+		summarizeBy: count
+		sourceColumn: Car ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 864befe8-d5a3-444c-a287-ad220b8adfb9
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Image URL'
+		dataType: string
+		lineageTag: a97304b5-96bd-4be7-a45e-661e1b929339
+		summarizeBy: none
+		sourceColumn: Image URL
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Brand ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: f2055f66-e514-470b-beeb-452df5844d5e
+		summarizeBy: none
+		sourceColumn: Brand ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Weight lbs'
+		dataType: int64
+		formatString: 0
+		lineageTag: bf59b2ab-cc58-4e22-bb40-4a089fe8289c
+		summarizeBy: sum
+		sourceColumn: Weight lbs
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Engine Capacity in3'
+		dataType: int64
+		formatString: 0
+		lineageTag: 66b49102-f45b-4607-bebe-9c0d0ca5251d
+		summarizeBy: sum
+		sourceColumn: Engine Capacity in3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Power to Weight bhp/ton RAW'
+		dataType: int64
+		formatString: 0
+		lineageTag: 63d594c0-8148-44fb-a725-c01ca3017c8b
+		summarizeBy: sum
+		sourceColumn: Power to Weight bhp/ton RAW
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Torque to Weight'
+		dataType: int64
+		formatString: 0
+		lineageTag: a610dc80-f6d0-4dd4-a9e9-d9af0adc7e2d
+		summarizeBy: sum
+		sourceColumn: Torque to Weight
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Top Speed mph'
+		dataType: int64
+		formatString: 0
+		lineageTag: 57e0f6c8-5c65-4f85-ae2a-0374840af907
+		summarizeBy: sum
+		sourceColumn: Top Speed mph
+
+		annotation SummarizationSetBy = Automatic
+
+	column '0 - 60 mph sec'
+		dataType: double
+		lineageTag: 40ee9355-6bad-41cc-a598-bdd79a7ad1a8
+		summarizeBy: sum
+		sourceColumn: 0 - 60 mph sec
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Performance
+		dataType: int64
+		formatString: 0
+		lineageTag: bf529a9a-ab91-400a-8daf-7c7f1974116b
+		summarizeBy: sum
+		sourceColumn: Performance
+
+		annotation SummarizationSetBy = Automatic
+
+	column Handling
+		dataType: double
+		formatString: 0
+		lineageTag: 6621bde0-ecc5-4163-9e14-dba206041361
+		summarizeBy: sum
+		sourceColumn: Handling
+
+		annotation SummarizationSetBy = Automatic
+
+	column Looks
+		dataType: int64
+		formatString: 0
+		lineageTag: 92b2ae7d-f11f-4267-a455-1c73ee986a03
+		summarizeBy: sum
+		sourceColumn: Looks
+
+		annotation SummarizationSetBy = Automatic
+
+	column Features
+		dataType: int64
+		formatString: 0
+		lineageTag: 6c2db096-d0e0-4db9-9960-3870aa585ef9
+		summarizeBy: sum
+		sourceColumn: Features
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quality
+		dataType: int64
+		formatString: 0
+		lineageTag: 4af387eb-b87c-4c4f-9054-f099e80e9fd5
+		summarizeBy: sum
+		sourceColumn: Quality
+
+		annotation SummarizationSetBy = Automatic
+
+	column Costs
+		dataType: int64
+		formatString: 0
+		lineageTag: 825c12ab-a074-43da-a252-a157ea7fa842
+		summarizeBy: sum
+		sourceColumn: Costs
+
+		annotation SummarizationSetBy = Automatic
+
+	column Desire
+		dataType: int64
+		formatString: 0
+		lineageTag: 7fdd25d7-ea6f-4aa4-88cf-2f57e9bf9fa2
+		summarizeBy: sum
+		sourceColumn: Desire
+
+		annotation SummarizationSetBy = Automatic
+
+	column Eco
+		dataType: int64
+		formatString: 0
+		lineageTag: 1a20ed32-d86d-459f-8d82-74432d01333d
+		summarizeBy: sum
+		sourceColumn: Eco
+
+		annotation SummarizationSetBy = Automatic
+
+	column Practicality
+		dataType: int64
+		formatString: 0
+		lineageTag: 0b917104-d647-4618-be82-8b859a45c7fe
+		summarizeBy: sum
+		sourceColumn: Practicality
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sound
+		dataType: int64
+		formatString: 0
+		lineageTag: 0a628247-2804-4c90-b19f-d4ea08322c8d
+		summarizeBy: sum
+		sourceColumn: Sound
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Overall Rating'
+		dataType: double
+		lineageTag: 83161dfa-4963-4117-a48e-2054ff537756
+		summarizeBy: sum
+		sourceColumn: Overall Rating
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Money No Object'
+		dataType: double
+		lineageTag: 75b66f3a-1828-4ed8-812f-a95b0bb916c6
+		summarizeBy: sum
+		sourceColumn: Money No Object
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Bargain Rating'
+		dataType: double
+		lineageTag: 72cc2628-f272-49cd-a349-9ee7c18172cd
+		summarizeBy: sum
+		sourceColumn: Bargain Rating
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Max Power bhp'
+		dataType: int64
+		formatString: 0
+		lineageTag: d9abed1e-4789-473c-97c4-48e72a614a15
+		summarizeBy: sum
+		sourceColumn: Max Power bhp
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Max Power rpm'
+		dataType: int64
+		formatString: 0
+		lineageTag: 703fe664-1193-4889-85e2-66b84584f309
+		summarizeBy: sum
+		sourceColumn: Max Power rpm
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Max Torque lb/ft'
+		dataType: int64
+		formatString: 0
+		lineageTag: 93e6a097-6d7b-4c8b-9cf8-8b787e8d868d
+		summarizeBy: sum
+		sourceColumn: Max Torque lb/ft
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Max Torque rpm'
+		dataType: int64
+		formatString: 0
+		lineageTag: da8a7090-06a1-4a5c-b0e4-210e8918c1b8
+		summarizeBy: sum
+		sourceColumn: Max Torque rpm
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Engine Tech ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: b0485d29-2eee-46ce-8439-d112aea8c985
+		summarizeBy: none
+		sourceColumn: Engine Tech ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Engine Type ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: d3d7e3fe-3a06-4546-9f21-47cb68f587da
+		summarizeBy: none
+		sourceColumn: Engine Type ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Class ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0ea57a89-bbd7-455d-9058-26a5f986a6d3
+		summarizeBy: none
+		sourceColumn: Class ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Layout ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1e7ea52e-f089-4fdd-a5cc-69c2a2eeeeee
+		summarizeBy: none
+		sourceColumn: Layout ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Body ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 425137bd-3a46-4281-8d70-d731bbe66951
+		summarizeBy: none
+		sourceColumn: Body ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Production Start'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f44aa7da-6036-4816-9d37-9c4aa8ac861a
+		summarizeBy: none
+		sourceColumn: Production Start
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Power to Weight bhp/ton' = ```
+			
+			VAR RawValue = [Power to Weight bhp/ton RAW]
+			VAR MaxPower = [Max Power bhp]
+			VAR WeightLBS = [Weight lbs]
+			VAR power_to_weight =
+			    IF (
+			        NOT ISBLANK(MaxPower)
+			            && NOT ISBLANK(WeightLBS)
+			            && WeightLBS <> 0,
+			        (MaxPower / WeightLBS) * 2240,
+			        RawValue
+			    )
+			RETURN
+			    IF (
+			        ISBLANK(RawValue),
+			        ROUND(power_to_weight, 0),
+			        ROUND(RawValue, 0)
+			    )
+			
+			```
+		lineageTag: 297c56ab-ef10-4e4d-8b7b-9a08d48e15eb
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Transmission Config ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 8884327f-090b-4e3e-a432-62a42de07791
+		summarizeBy: none
+		sourceColumn: Transmission Config ID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition '_ Fact_Cars' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Documents\Data Analysis\projects\super cars project\super_cars_data.csv"),[Delimiter=",", Columns=57, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Car ID", Int64.Type}, {"Name", type text}, {"Production", type text}, {"New Price", type text}, {"Used Price", type text}, {"Image URL", type text}, {"Brand ID", Int64.Type}, {"Class", type text}, {"Body", type text}, {"Layout", type text}, {"Transmission", type text}, {"Number Built", Int64.Type}, {"Length", type text}, {"Width", type text}, {"Height", type text}, {"Weight", type text}, {"Wheels (F/R)", type text}, {"Tyres (F/R)", type text}, {"Fuel Capacity", type text}, {"Type", type text}, {"Details", type text}, {"Capacity", type text}, {"Max Power", type text}, {"Max Torque", type text}, {"Power to Weight", type text}, {"Torque to Weight", type text}, {"Specific Output", type text}, {"Compression", type text}, {"Bore x Stroke", type text}, {"Fuel Cons", type text}, {"Emissions", type text}, {"Top Speed", type text}, {"0 - 30 mph", type text}, {"0 - 60 mph", type text}, {"0 - 100 mph", type text}, {"0 - 124 mph", type text}, {"0 - 186 mph", type text}, {"30 - 70 mph", type text}, {"Standing qtr Mile", type text}, {"60 - 0 mph", type text}, {"0 - 100 - 0 mph", type text}, {"Ring Lap Time", type text}, {"Lateral Accn", type text}, {"Drag Cd", type number}, {"Performance", type text}, {"Handling", type text}, {"Looks", type text}, {"Features", type text}, {"Quality", type text}, {"Costs", type text}, {"Desire", type text}, {"Eco", type text}, {"Practicality", type text}, {"Sound", type text}, {"Overall Rating", Percentage.Type}, {"Money No Object", Percentage.Type}, {"Bargain Rating", Percentage.Type}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Number Built", "Length", "Width", "Height", "Wheels (F/R)", "Tyres (F/R)", "Fuel Capacity", "Specific Output", "Compression", "Bore x Stroke", "Fuel Cons", "Emissions", "0 - 30 mph", "0 - 100 mph", "0 - 124 mph", "0 - 186 mph", "30 - 70 mph", "60 - 0 mph", "0 - 100 - 0 mph", "Ring Lap Time", "Lateral Accn", "Drag Cd"}),
+				    #"Empty string to null" = Table.ReplaceValue(#"Removed Columns","",null,Replacer.ReplaceValue,{"Car ID", "Name", "Production", "New Price", "Used Price", "Image URL", "Brand ID", "Class", "Body", "Layout", "Transmission", "Weight", "Type", "Details", "Capacity", "Max Power", "Max Torque", "Power to Weight", "Torque to Weight", "Top Speed", "0 - 60 mph", "Standing qtr Mile", "Performance", "Handling", "Looks", "Features", "Quality", "Costs", "Desire", "Eco", "Practicality", "Sound", "Overall Rating", "Money No Object", "Bargain Rating"}),
+				    #"""N/A"" to null" = Table.ReplaceValue(#"Empty string to null",null,"N/A",Replacer.ReplaceValue,{"Class", "Body", "Layout", "Transmission", "Type", "Details"}),
+				    #"Rating columns to text type" = Table.TransformColumnTypes(#"""N/A"" to null",{{"Performance", type text}, {"Handling", type text}, {"Looks", type text}, {"Features", type text}, {"Quality", type text}, {"Costs", type text}, {"Desire", type text}, {"Sound", type text}, {"Practicality", type text}, {"Eco", type text}}),
+				    #"Split the Production column" = Table.SplitColumn(#"Rating columns to text type", "Production", Splitter.SplitTextByDelimiter(" - ", QuoteStyle.Csv), {"Production.1", "Production.2", "Production.3"}),
+				    #"""date"" wiht null" = Table.ReplaceValue(#"Split the Production column","date","",Replacer.ReplaceText,{"Production.2"}),
+				    #"Production Columns to text" = Table.TransformColumnTypes(#"""date"" wiht null",{{"Production.1", Int64.Type}, {"Production.2", Int64.Type}, {"Production.3", type text}}),
+				    #"Removed ""Production.3""" = Table.RemoveColumns(#"Production Columns to text",{"Production.3"}),
+				    #"Renamed ""Production"" Columns" = Table.RenameColumns(#"Removed ""Production.3""",{{"Production.1", "Production Start"}, {"Production.2", "Production End"}}),
+				    #"Added ""start of the year""" = Table.AddColumn(#"Renamed ""Production"" Columns", "start of the year", each "01/01/"),
+				    #"Duplicated ""start of the year""" = Table.DuplicateColumn(#"Added ""start of the year""", "start of the year", "start of the year - Copy"),
+				    #"Reordered Columns5" = Table.ReorderColumns(#"Duplicated ""start of the year""",{"Car ID", "Name", "start of the year", "Production Start", "start of the year - Copy", "Production End", "New Price", "Used Price", "Image URL", "Brand ID", "Class", "Body", "Layout", "Transmission", "Weight", "Type", "Details", "Capacity", "Max Power", "Max Torque", "Power to Weight", "Torque to Weight", "Top Speed", "0 - 60 mph", "Standing qtr Mile", "Performance", "Handling", "Looks", "Features", "Quality", "Costs", "Desire", "Eco", "Practicality", "Sound", "Overall Rating", "Money No Object", "Bargain Rating"}),
+				    #"Merged ""Production Start"" and ""start of the year""" = Table.CombineColumns(Table.TransformColumnTypes(#"Reordered Columns5", {{"Production Start", type text}}, "en-001"),{"start of the year", "Production Start"},Combiner.CombineTextByDelimiter("", QuoteStyle.None),"Production Start"),
+				    #"Replaced ""0"" with null ""Production End""" = Table.ReplaceValue(#"Merged ""Production Start"" and ""start of the year""",null,0,Replacer.ReplaceValue,{"Production End"}),
+				    #"Merged ""Production End"" and ""start of the year - Copy""" = Table.CombineColumns(Table.TransformColumnTypes(#"Replaced ""0"" with null ""Production End""", {{"Production End", type text}}, "en-001"),{"start of the year - Copy", "Production End"},Combiner.CombineTextByDelimiter("", QuoteStyle.None),"Production End"),
+				    #"Replaced ""01/01/0"" with null" = Table.ReplaceValue(#"Merged ""Production End"" and ""start of the year - Copy""","01/01/0",null,Replacer.ReplaceValue,{"Production End"}),
+				    #"Production columns to date type" = Table.TransformColumnTypes(#"Replaced ""01/01/0"" with null",{{"Production Start", type date}, {"Production End", type date}}),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Production columns to date type",{{"Production Start", type date}, {"Production End", type date}}),
+				    #"Removed ""Production End""" = Table.RemoveColumns(#"Changed Type3",{"Production End"}),
+				    #"Replaced Value3" = Table.ReplaceValue(#"Removed ""Production End""","£n/a","null",Replacer.ReplaceText,{"New Price"}),
+				    #"Replaced Value4" = Table.ReplaceValue(#"Replaced Value3","£","",Replacer.ReplaceText,{"New Price"}),
+				    #"Changed Type4" = Table.TransformColumnTypes(#"Replaced Value4",{{"New Price", Int64.Type}}),
+				    #"Replaced Value5" = Table.ReplaceValue(#"Changed Type4","£n/a - £n/a",null,Replacer.ReplaceValue,{"Used Price"}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Replaced Value5",{{"Weight", "Weight lbs"}, {"New Price", "New Price £"}}),
+				    #"Removed Columns2" = Table.RemoveColumns(#"Renamed Columns1",{"New Price £", "Used Price"}),
+				    #"Replaced Value6" = Table.ReplaceValue(#"Removed Columns2"," lbs","",Replacer.ReplaceText,{"Weight lbs"}),
+				    #"Changed Type5" = Table.TransformColumnTypes(#"Replaced Value6",{{"Weight lbs", Int64.Type}}),
+				    #"Renamed Columns2" = Table.RenameColumns(#"Changed Type5",{{"Capacity", "Capacity in3"}}),
+				    #"Replaced Value7" = Table.ReplaceValue(#"Renamed Columns2"," in3","",Replacer.ReplaceText,{"Capacity in3"}),
+				    #"Changed Type6" = Table.TransformColumnTypes(#"Replaced Value7",{{"Capacity in3", Int64.Type}}),
+				    #"Split Column by Delimiter1" = Table.SplitColumn(#"Changed Type6", "Max Power", Splitter.SplitTextByDelimiter("@", QuoteStyle.Csv), {"Max Power.1", "Max Power.2"}),
+				    #"Changed Type7" = Table.TransformColumnTypes(#"Split Column by Delimiter1",{{"Max Power.1", type text}, {"Max Power.2", type text}}),
+				    #"Renamed Columns3" = Table.RenameColumns(#"Changed Type7",{{"Max Power.1", "Max Power bhp"}, {"Max Power.2", "Max Power rpm"}}),
+				    #"Replaced Value8" = Table.ReplaceValue(#"Renamed Columns3"," bhp","",Replacer.ReplaceText,{"Max Power bhp"}),
+				    #"Changed Type8" = Table.TransformColumnTypes(#"Replaced Value8",{{"Max Power bhp", Int64.Type}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Changed Type8","rpm","",Replacer.ReplaceText,{"Max Power rpm"}),
+				    #"Replaced Value10" = Table.ReplaceValue(#"Replaced Value","",null,Replacer.ReplaceValue,{"Max Power rpm"}),
+				    #"Split Column by Delimiter2" = Table.SplitColumn(#"Replaced Value10", "Max Torque", Splitter.SplitTextByDelimiter("@", QuoteStyle.Csv), {"Max Torque.1", "Max Torque.2"}),
+				    #"Changed Type9" = Table.TransformColumnTypes(#"Split Column by Delimiter2",{{"Max Torque.1", type text}, {"Max Torque.2", type text}}),
+				    #"Renamed Columns4" = Table.RenameColumns(#"Changed Type9",{{"Max Torque.1", "Max Torque lb/ft"}, {"Max Torque.2", "Max Torque rpm"}}),
+				    #"Replaced Value11" = Table.ReplaceValue(#"Renamed Columns4","lb/ft","",Replacer.ReplaceText,{"Max Torque lb/ft"}),
+				    #"Replaced Value12" = Table.ReplaceValue(#"Replaced Value11","",null,Replacer.ReplaceValue,{"Max Torque lb/ft"}),
+				    #"Replaced Value13" = Table.ReplaceValue(#"Replaced Value12","rpm","",Replacer.ReplaceText,{"Max Torque rpm"}),
+				    #"Replaced Value14" = Table.ReplaceValue(#"Replaced Value13","",null,Replacer.ReplaceValue,{"Max Torque rpm"}),
+				    #"Renamed Columns5" = Table.RenameColumns(#"Replaced Value14",{{"Power to Weight", "Power to Weight bhp/ton"}}),
+				    #"Replaced Value15" = Table.ReplaceValue(#"Renamed Columns5","bhp/ton","",Replacer.ReplaceText,{"Power to Weight bhp/ton"}),
+				    #"Replaced Value16" = Table.ReplaceValue(#"Replaced Value15","",null,Replacer.ReplaceValue,{"Power to Weight bhp/ton"}),
+				    #"Replaced Value17" = Table.ReplaceValue(#"Replaced Value16","lbft/ton","",Replacer.ReplaceText,{"Torque to Weight"}),
+				    #"Replaced Value18" = Table.ReplaceValue(#"Replaced Value17","",null,Replacer.ReplaceValue,{"Torque to Weight"}),
+				    #"Renamed Columns6" = Table.RenameColumns(#"Replaced Value18",{{"Top Speed", "Top Speed mph"}}),
+				    #"Replaced Value19" = Table.ReplaceValue(#"Renamed Columns6","mph","",Replacer.ReplaceText,{"Top Speed mph"}),
+				    #"Replaced Value20" = Table.ReplaceValue(#"Replaced Value19","",null,Replacer.ReplaceValue,{"Top Speed mph"}),
+				    #"Renamed Columns7" = Table.RenameColumns(#"Replaced Value20",{{"0 - 60 mph", "0 - 60 mph sec"}}),
+				    #"Replaced Value21" = Table.ReplaceValue(#"Renamed Columns7","sec","",Replacer.ReplaceText,{"0 - 60 mph sec"}),
+				    #"Replaced Value22" = Table.ReplaceValue(#"Replaced Value21","",null,Replacer.ReplaceValue,{"0 - 60 mph sec"}),
+				    #"Changed Type10" = Table.TransformColumnTypes(#"Replaced Value22",{{"Max Torque lb/ft", Int64.Type}, {"Max Power rpm", Int64.Type}, {"Max Torque rpm", Int64.Type}, {"Power to Weight bhp/ton", Int64.Type}, {"Torque to Weight", Int64.Type}, {"Top Speed mph", Int64.Type}, {"0 - 60 mph sec", type number}}),
+				    #"Removed Columns3" = Table.RemoveColumns(#"Changed Type10",{"Standing qtr Mile"}),
+				    #"Renamed Columns8" = Table.RenameColumns(#"Removed Columns3",{{"Type", "Engine Tech"}, {"Details", "Engine Type"}}),
+				    #"Merged Queries" = Table.NestedJoin(#"Renamed Columns8", {"Engine Tech"}, #"Dim Engine Tech", {"Tech"}, "Dim Engine Tech", JoinKind.LeftOuter),
+				    #"Expanded Dim Engine Tech" = Table.ExpandTableColumn(#"Merged Queries", "Dim Engine Tech", {"Engine Tech ID"}, {"Dim Engine Tech.Engine Tech ID"}),
+				    #"Removed Columns4" = Table.RemoveColumns(#"Expanded Dim Engine Tech",{"Engine Tech"}),
+				    #"Renamed Columns9" = Table.RenameColumns(#"Removed Columns4",{{"Dim Engine Tech.Engine Tech ID", "Engine Tech ID"}}),
+				    #"Merged Queries1" = Table.NestedJoin(#"Renamed Columns9", {"Engine Type"}, #"Dim Engine Type", {"Type"}, "Dim Engine Type", JoinKind.LeftOuter),
+				    #"Expanded Dim Engine Type" = Table.ExpandTableColumn(#"Merged Queries1", "Dim Engine Type", {"Engine Type ID"}, {"Dim Engine Type.Engine Type ID"}),
+				    #"Removed Columns5" = Table.RemoveColumns(#"Expanded Dim Engine Type",{"Engine Type"}),
+				    #"Renamed Columns10" = Table.RenameColumns(#"Removed Columns5",{{"Dim Engine Type.Engine Type ID", "Engine Type ID"}}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Renamed Columns10",{"Car ID", "Name", "Production Start", "Image URL", "Brand ID", "Class", "Body", "Layout", "Transmission", "Weight lbs", "Engine Tech ID", "Engine Type ID", "Capacity in3", "Max Power bhp", "Max Power rpm", "Max Torque lb/ft", "Max Torque rpm", "Power to Weight bhp/ton", "Torque to Weight", "Top Speed mph", "0 - 60 mph sec", "Performance", "Handling", "Looks", "Features", "Quality", "Costs", "Desire", "Eco", "Practicality", "Sound", "Overall Rating", "Money No Object", "Bargain Rating"}),
+				    #"Merged Queries2" = Table.NestedJoin(#"Reordered Columns", {"Transmission"}, Transmissions_raw, {"Transmission Config"}, "Transmissions_raw", JoinKind.LeftOuter),
+				    #"Expanded Transmissions_raw" = Table.ExpandTableColumn(#"Merged Queries2", "Transmissions_raw", {"Transmission Config ID"}, {"Transmissions_raw.Transmission Config ID"}),
+				    #"Renamed Columns11" = Table.RenameColumns(#"Expanded Transmissions_raw",{{"Transmissions_raw.Transmission Config ID", "Transmission Config ID"}}),
+				    #"Reordered Columns1" = Table.ReorderColumns(#"Renamed Columns11",{"Car ID", "Name", "Production Start", "Image URL", "Brand ID", "Class", "Body", "Layout", "Transmission Config ID", "Transmission", "Weight lbs", "Engine Tech ID", "Engine Type ID", "Capacity in3", "Max Power bhp", "Max Power rpm", "Max Torque lb/ft", "Max Torque rpm", "Power to Weight bhp/ton", "Torque to Weight", "Top Speed mph", "0 - 60 mph sec", "Performance", "Handling", "Looks", "Features", "Quality", "Costs", "Desire", "Eco", "Practicality", "Sound", "Overall Rating", "Money No Object", "Bargain Rating"}),
+				    #"Removed Columns6" = Table.RemoveColumns(#"Reordered Columns1",{"Transmission"}),
+				    #"Merged Queries3" = Table.NestedJoin(#"Removed Columns6", {"Class"}, #"Dim Class", {"Class"}, "Dim Classes", JoinKind.LeftOuter),
+				    #"Expanded Dim Classes" = Table.ExpandTableColumn(#"Merged Queries3", "Dim Classes", {"Class ID"}, {"Dim Classes.Class ID"}),
+				    #"Reordered Columns2" = Table.ReorderColumns(#"Expanded Dim Classes",{"Car ID", "Name", "Production Start", "Image URL", "Brand ID", "Dim Classes.Class ID", "Class", "Body", "Layout", "Transmission Config ID", "Weight lbs", "Engine Tech ID", "Engine Type ID", "Capacity in3", "Max Power bhp", "Max Power rpm", "Max Torque lb/ft", "Max Torque rpm", "Power to Weight bhp/ton", "Torque to Weight", "Top Speed mph", "0 - 60 mph sec", "Performance", "Handling", "Looks", "Features", "Quality", "Costs", "Desire", "Eco", "Practicality", "Sound", "Overall Rating", "Money No Object", "Bargain Rating"}),
+				    #"Removed Columns7" = Table.RemoveColumns(#"Reordered Columns2",{"Class"}),
+				    #"Renamed Columns12" = Table.RenameColumns(#"Removed Columns7",{{"Dim Classes.Class ID", "Class ID"}}),
+				    #"Merged Queries4" = Table.NestedJoin(#"Renamed Columns12", {"Layout"}, #"Dim Layout", {"Layout"}, "Dim Layout", JoinKind.LeftOuter),
+				    #"Expanded Dim Layout" = Table.ExpandTableColumn(#"Merged Queries4", "Dim Layout", {"Layout ID"}, {"Dim Layout.Layout ID"}),
+				    #"Renamed Columns13" = Table.RenameColumns(#"Expanded Dim Layout",{{"Dim Layout.Layout ID", "Layout ID"}}),
+				    #"Reordered Columns3" = Table.ReorderColumns(#"Renamed Columns13",{"Car ID", "Name", "Production Start", "Image URL", "Brand ID", "Class ID", "Body", "Layout ID", "Layout", "Transmission Config ID", "Weight lbs", "Engine Tech ID", "Engine Type ID", "Capacity in3", "Max Power bhp", "Max Power rpm", "Max Torque lb/ft", "Max Torque rpm", "Power to Weight bhp/ton", "Torque to Weight", "Top Speed mph", "0 - 60 mph sec", "Performance", "Handling", "Looks", "Features", "Quality", "Costs", "Desire", "Eco", "Practicality", "Sound", "Overall Rating", "Money No Object", "Bargain Rating"}),
+				    #"Removed Columns8" = Table.RemoveColumns(#"Reordered Columns3",{"Layout"}),
+				    #"Merged Queries5" = Table.NestedJoin(#"Removed Columns8", {"Body"}, #"Dim Body", {"Body"}, "Dim Body", JoinKind.LeftOuter),
+				    #"Expanded Dim Body" = Table.ExpandTableColumn(#"Merged Queries5", "Dim Body", {"Body ID"}, {"Dim Body.Body ID"}),
+				    #"Renamed Columns14" = Table.RenameColumns(#"Expanded Dim Body",{{"Dim Body.Body ID", "Body ID"}}),
+				    #"Reordered Columns4" = Table.ReorderColumns(#"Renamed Columns14",{"Car ID", "Name", "Production Start", "Image URL", "Brand ID", "Class ID", "Body ID", "Body", "Layout ID", "Transmission Config ID", "Weight lbs", "Engine Tech ID", "Engine Type ID", "Capacity in3", "Max Power bhp", "Max Power rpm", "Max Torque lb/ft", "Max Torque rpm", "Power to Weight bhp/ton", "Torque to Weight", "Top Speed mph", "0 - 60 mph sec", "Performance", "Handling", "Looks", "Features", "Quality", "Costs", "Desire", "Eco", "Practicality", "Sound", "Overall Rating", "Money No Object", "Bargain Rating"}),
+				    #"Removed Columns9" = Table.RemoveColumns(#"Reordered Columns4",{"Body"}),
+				    #"Renamed Columns15" = Table.RenameColumns(#"Removed Columns9",{{"Capacity in3", "Engine Capacity in3"}}),
+				    #"Extracted Text Before Delimiter" = Table.TransformColumns(#"Renamed Columns15", {{"Quality", each Text.BeforeDelimiter(_, "/"), type text}, {"Costs", each Text.BeforeDelimiter(_, "/"), type text}, {"Desire", each Text.BeforeDelimiter(_, "/"), type text}, {"Performance", each Text.BeforeDelimiter(_, "/"), type text}, {"Handling", each Text.BeforeDelimiter(_, "/"), type text}, {"Looks", each Text.BeforeDelimiter(_, "/"), type text}, {"Features", each Text.BeforeDelimiter(_, "/"), type text}, {"Eco", each Text.BeforeDelimiter(_, "/"), type text}, {"Practicality", each Text.BeforeDelimiter(_, "/"), type text}, {"Sound", each Text.BeforeDelimiter(_, "/"), type text}}),
+				    #"Changed Type11" = Table.TransformColumnTypes(#"Extracted Text Before Delimiter",{{"Performance", Int64.Type}, {"Handling", Int64.Type}, {"Looks", Int64.Type}, {"Features", Int64.Type}, {"Quality", Int64.Type}, {"Costs", Int64.Type}, {"Desire", Int64.Type}, {"Eco", Int64.Type}, {"Practicality", Int64.Type}, {"Sound", Int64.Type}}),
+				    #"Renamed Columns16" = Table.RenameColumns(#"Changed Type11",{{"Power to Weight bhp/ton", "Power to Weight bhp/ton RAW"}}),
+				    #"Changed Type13" = Table.TransformColumnTypes(#"Renamed Columns16",{{"Handling", type number}})
+				in
+				    #"Changed Type13"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

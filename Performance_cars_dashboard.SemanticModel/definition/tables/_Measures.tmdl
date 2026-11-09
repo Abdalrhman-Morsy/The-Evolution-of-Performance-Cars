@@ -1,0 +1,98 @@
+table _Measures
+	lineageTag: c9b499de-502a-42f2-b304-456cead83222
+
+	measure 'MED bhp' = MEDIAN('_ Fact_Cars'[Max Power bhp])
+		formatString: 0
+		lineageTag: 42649ca2-6432-4916-8b6b-3775e6aba7fe
+
+	measure 'MED Topspeed' = MEDIAN('_ Fact_Cars'[Top Speed mph])
+		formatString: 0
+		lineageTag: a916998a-6eb1-422e-ac3b-90e323655e82
+
+	measure 'MED Torque' = MEDIAN('_ Fact_Cars'[Max Torque lb/ft])
+		lineageTag: 2905277f-f3cc-4161-b27c-2110e3d15a1e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total New Production' = COUNT('_ Fact_Cars'[Production Start])
+		formatString: 0
+		lineageTag: 5cac1d53-c141-4c6c-9622-23a2f474ad8d
+
+	measure 'MED Engine Capacity' = ```
+			MEDIAN('_ Fact_Cars'[Engine Capacity in3]) 
+			```
+		lineageTag: 6f5cdd5e-4337-4fa7-9f06-11b8489f572e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'MED Money' = MEDIAN('_ Fact_Cars'[Money No Object])*10
+		lineageTag: 282c24fa-4be7-448d-8e1f-3a168d8709a7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'MED Bargain' = MEDIAN('_ Fact_Cars'[Bargain Rating])*10
+		lineageTag: d3d7fc92-5ba4-4c2f-b0cf-565eca89b3b3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'MED Overall Rating' = MEDIAN('_ Fact_Cars'[Overall Rating])*10
+		lineageTag: 3e8b7914-7fe8-44d0-a007-350b49cffcff
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'MED Desire' = MEDIAN('_ Fact_Cars'[Desire])
+		lineageTag: 40fbe2f3-4caf-493b-a239-f0071e452697
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'MED Looks' = MEDIAN('_ Fact_Cars'[Looks])
+		lineageTag: a33a6f66-8ed3-4841-b60b-1a6c095740bd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'MED Sound' = ```
+			MEDIAN('_ Fact_Cars'[Sound]) 
+			```
+		lineageTag: 84f8afba-d84c-46d9-9c71-29f89d57b754
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'MED 0-60' = MEDIAN('_ Fact_Cars'[0 - 60 mph sec])
+		lineageTag: 7085de0e-b7a1-4cf3-a02d-80f546b1b559
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'MED Quality' = MEDIAN('_ Fact_Cars'[Quality])
+		lineageTag: 229cde33-05bb-4bf9-854e-9295773c0b7a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'MED Power to Wieght' = MEDIAN('_ Fact_Cars'[Power to Weight bhp/ton])
+		lineageTag: a2ca246d-d4e6-4304-b86e-8b343f7620f7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'New Production Lable' = "Releases"
+		lineageTag: 21106375-07d8-4a1f-8411-4ef9e31e4029
+
+	measure 'Total Production Card' = "New Production: "&[Total New Production]
+		lineageTag: a47e7892-5edf-4b5a-8dd8-edfd1d23c033
+
+	column Column
+		isHidden
+		formatString: 0
+		lineageTag: bdf33349-9c33-4f28-9a31-5f3a363a30d6
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Measures = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 3e73cbf1856d41cfaa80c847242c5fee
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

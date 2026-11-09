@@ -1,0 +1,62 @@
+table Transmissions_type
+	isHidden
+	lineageTag: 488f7d68-cdc7-4ec0-bf96-d60ffb538564
+
+	column 'Transmission Config'
+		dataType: string
+		isHidden
+		lineageTag: 55248c84-2d74-47d6-a511-e186cbcb1151
+		summarizeBy: none
+		sourceColumn: Transmission Config
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Transmission list'
+		dataType: string
+		isHidden
+		lineageTag: 6c613996-2ede-436c-9834-d88c3db905fb
+		summarizeBy: none
+		sourceColumn: Transmission list
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Transmissions_type = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Documents\Data Analysis\projects\super cars project\super_cars_data.csv"),[Delimiter=",", Columns=57, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Car ID", Int64.Type}, {"Name", type text}, {"Production", type text}, {"New Price", type text}, {"Used Price", type text}, {"Image URL", type text}, {"Brand ID", Int64.Type}, {"Class", type text}, {"Body", type text}, {"Layout", type text}, {"Transmission", type text}, {"Number Built", Int64.Type}, {"Length", type text}, {"Width", type text}, {"Height", type text}, {"Weight", type text}, {"Wheels (F/R)", type text}, {"Tyres (F/R)", type text}, {"Fuel Capacity", type text}, {"Type", type text}, {"Details", type text}, {"Capacity", type text}, {"Max Power", type text}, {"Max Torque", type text}, {"Power to Weight", type text}, {"Torque to Weight", type text}, {"Specific Output", type text}, {"Compression", type text}, {"Bore x Stroke", type text}, {"Fuel Cons", type text}, {"Emissions", type text}, {"Top Speed", type text}, {"0 - 30 mph", type text}, {"0 - 60 mph", type text}, {"0 - 100 mph", type text}, {"0 - 124 mph", type text}, {"0 - 186 mph", type text}, {"30 - 70 mph", type text}, {"Standing qtr Mile", type text}, {"60 - 0 mph", type text}, {"0 - 100 - 0 mph", type text}, {"Ring Lap Time", type text}, {"Lateral Accn", type text}, {"Drag Cd", type number}, {"Performance", type text}, {"Handling", type text}, {"Looks", type text}, {"Features", type text}, {"Quality", type text}, {"Costs", type text}, {"Desire", type text}, {"Eco", type text}, {"Practicality", type text}, {"Sound", type text}, {"Overall Rating", Percentage.Type}, {"Money No Object", Percentage.Type}, {"Bargain Rating", Percentage.Type}}),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Changed Type",{"Transmission"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns"),
+				    #"Duplicated Column" = Table.DuplicateColumn(#"Removed Duplicates", "Transmission", "Transmission - Copy"),
+				    #"Replaced Value23" = Table.ReplaceValue(#"Duplicated Column","Automatic","Auto",Replacer.ReplaceText,{"Transmission - Copy"}),
+				    #"Replaced Value24" = Table.ReplaceValue(#"Replaced Value23","Speed Auto ","Speed Auto, ",Replacer.ReplaceText,{"Transmission - Copy"}),
+				    #"Replaced Value25" = Table.ReplaceValue(#"Replaced Value24","Speed Semi Auto ","Speed Simi Auto, ",Replacer.ReplaceText,{"Transmission - Copy"}),
+				    #"Replaced Value26" = Table.ReplaceValue(#"Replaced Value25","7 Speed Dual Clutch Manual","7 Speed Manual/Dual Clutch,",Replacer.ReplaceText,{"Transmission - Copy"}),
+				    #"Replaced Value27" = Table.ReplaceValue(#"Replaced Value26","Speed Manual ","Speed Manual, ",Replacer.ReplaceText,{"Transmission - Copy"}),
+				    #"Replaced Value28" = Table.ReplaceValue(#"Replaced Value27","Speed Dual Clutch ","Speed Dual Clutch, ",Replacer.ReplaceText,{"Transmission - Copy"}),
+				    #"Split Column by Delimiter3" = Table.SplitColumn(#"Replaced Value28", "Transmission - Copy", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), {"Transmission - Copy.1", "Transmission - Copy.2"}),
+				    #"Changed Type11" = Table.TransformColumnTypes(#"Split Column by Delimiter3",{{"Transmission - Copy.1", type text}, {"Transmission - Copy.2", type text}}),
+				    #"Replaced Value29" = Table.ReplaceValue(#"Changed Type11","",null,Replacer.ReplaceValue,{"Transmission - Copy.1", "Transmission - Copy.2"}),
+				    #"Replaced Value30" = Table.ReplaceValue(#"Replaced Value29",null,"N/A",Replacer.ReplaceValue,{"Transmission - Copy.1", "Transmission - Copy.2"}),
+				    #"Capitalized Each Word" = Table.TransformColumns(#"Replaced Value30",{{"Transmission - Copy.1", Text.Proper, type text}, {"Transmission - Copy.2", Text.Proper, type text}}),
+				    #"Replaced Value31" = Table.ReplaceValue(#"Capitalized Each Word","? "," ",Replacer.ReplaceText,{"Transmission - Copy.1", "Transmission - Copy.2"}),
+				    #"Replaced Value32" = Table.ReplaceValue(#"Replaced Value31"," ?"," ",Replacer.ReplaceText,{"Transmission - Copy.1", "Transmission - Copy.2"}),
+				    #"Trimmed Text" = Table.TransformColumns(#"Replaced Value32",{{"Transmission - Copy.1", Text.Trim, type text}, {"Transmission - Copy.2", Text.Trim, type text}}),
+				    #"Renamed Columns11" = Table.RenameColumns(#"Trimmed Text",{{"Transmission", "Transmission Config"}, {"Transmission - Copy.1", "Transmission list"}}),
+				    #"Removed Columns6" = Table.RemoveColumns(#"Renamed Columns11",{"Transmission list"}),
+				    #"Renamed Columns12" = Table.RenameColumns(#"Removed Columns6",{{"Transmission - Copy.2", "Transmission list"}})
+				in
+				    #"Renamed Columns12"
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

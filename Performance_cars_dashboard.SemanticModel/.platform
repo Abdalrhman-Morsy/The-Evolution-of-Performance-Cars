@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Performance_cars_dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f50000da-a324-4a9f-9c1d-ebfbfb6710d5"
+  }
+}

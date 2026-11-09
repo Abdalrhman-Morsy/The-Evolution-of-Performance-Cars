@@ -1,0 +1,38 @@
+table 'Dim Class'
+	lineageTag: 71d8b194-e7fd-4551-affe-931baebaa8fd
+
+	column Class
+		dataType: string
+		lineageTag: 1b9d7b00-57e6-4ea9-ba46-af1ee567c08d
+		summarizeBy: none
+		sourceColumn: Class
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Class ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: bce3877a-97f3-4d73-beb1-24002486f388
+		summarizeBy: none
+		sourceColumn: Class ID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dim Class' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Documents\Data Analysis\projects\super cars project\super_cars_data.csv"),[Delimiter=",", Columns=57, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Car ID", Int64.Type}, {"Name", type text}, {"Production", type text}, {"New Price", type text}, {"Used Price", type text}, {"Image URL", type text}, {"Brand ID", Int64.Type}, {"Class", type text}, {"Body", type text}, {"Layout", type text}, {"Transmission", type text}, {"Number Built", Int64.Type}, {"Length", type text}, {"Width", type text}, {"Height", type text}, {"Weight", type text}, {"Wheels (F/R)", type text}, {"Tyres (F/R)", type text}, {"Fuel Capacity", type text}, {"Type", type text}, {"Details", type text}, {"Capacity", type text}, {"Max Power", type text}, {"Max Torque", type text}, {"Power to Weight", type text}, {"Torque to Weight", type text}, {"Specific Output", type text}, {"Compression", type text}, {"Bore x Stroke", type text}, {"Fuel Cons", type text}, {"Emissions", type text}, {"Top Speed", type text}, {"0 - 30 mph", type text}, {"0 - 60 mph", type text}, {"0 - 100 mph", type text}, {"0 - 124 mph", type text}, {"0 - 186 mph", type text}, {"30 - 70 mph", type text}, {"Standing qtr Mile", type text}, {"60 - 0 mph", type text}, {"0 - 100 - 0 mph", type text}, {"Ring Lap Time", type text}, {"Lateral Accn", type text}, {"Drag Cd", type number}, {"Performance", type text}, {"Handling", type text}, {"Looks", type text}, {"Features", type text}, {"Quality", type text}, {"Costs", type text}, {"Desire", type text}, {"Eco", type text}, {"Practicality", type text}, {"Sound", type text}, {"Overall Rating", Percentage.Type}, {"Money No Object", Percentage.Type}, {"Bargain Rating", Percentage.Type}}),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Changed Type",{"Class"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns"),
+				    #"Added Index" = Table.AddIndexColumn(#"Removed Duplicates", "Class ID", 1, 1, Int64.Type),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Added Index",{"Class ID", "Class"})
+				in
+				    #"Reordered Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

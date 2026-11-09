@@ -1,0 +1,191 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1400.1640162671665,
+            "y": 0
+          },
+          "nodeIndex": "_Measures",
+          "nodeLineageTag": "c9b499de-502a-42f2-b304-456cead83222",
+          "size": {
+            "height": 505.40398802525226,
+            "width": 214
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 1126.7596173530653,
+            "y": 594.41618962900577
+          },
+          "nodeIndex": "Dim Engine Tech",
+          "nodeLineageTag": "c8821970-1824-47c4-9fcf-ea51ce727e15",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 1136.4600380513505,
+            "y": 758.28630840506742
+          },
+          "nodeIndex": "Dim Engine Type",
+          "nodeLineageTag": "e3d88df4-3e57-4449-acc3-98508ea57168",
+          "size": {
+            "height": 155,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 12.877505149255256,
+            "y": 439.359100367716
+          },
+          "nodeIndex": "Dim Transmissions",
+          "nodeLineageTag": "125a8845-cf51-4385-a983-49d720500353",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 12.877505149255242,
+            "y": 598.5278556265215
+          },
+          "nodeIndex": "Dim Layout",
+          "nodeLineageTag": "293f6e43-34a1-468f-8ba3-43c7b07845b8",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 17.170006865673656,
+            "y": 778.69387910885519
+          },
+          "nodeIndex": "Dim Body",
+          "nodeLineageTag": "bef92084-a945-499f-bb27-23c3f94f8076",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1126.0689593497304,
+            "y": 409.04296168669885
+          },
+          "nodeIndex": "Dim Class",
+          "nodeLineageTag": "71d8b194-e7fd-4551-affe-931baebaa8fd",
+          "size": {
+            "height": 145,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 1125.9870888257778,
+            "y": 131.03451673467359
+          },
+          "nodeIndex": "Dim Brands",
+          "nodeLineageTag": "900ffe3a-a137-4655-8d11-05eafb336f33",
+          "size": {
+            "height": 242.30094376438484,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 14.082446113139468,
+            "y": 255.26448085443269
+          },
+          "nodeIndex": "Transmissions_raw",
+          "nodeLineageTag": "3a75b409-58ed-4f06-b035-ea17f1ef1604",
+          "size": {
+            "height": 145,
+            "width": 236.86166781094562
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 5.852417302798969,
+            "y": 67.270528561961356
+          },
+          "nodeIndex": "Transmissions_type",
+          "nodeLineageTag": "488f7d68-cdc7-4ec0-bf96-d60ffb538564",
+          "size": {
+            "height": 145,
+            "width": 249.87057044427962
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 299.11512837341303,
+            "y": 110.04512904049822
+          },
+          "nodeIndex": "Transmissions_bridge",
+          "nodeLineageTag": "c2f63fce-c0c4-4b3c-8476-2ff5924a1ba5",
+          "size": {
+            "height": 191.73917296020085,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 831.9005497908754,
+            "y": 0
+          },
+          "nodeIndex": "Date",
+          "nodeLineageTag": "64490a36-79e7-4ddb-b0a3-65284a45e568",
+          "size": {
+            "height": 145,
+            "width": 255.46250858209214
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 574.48593866440035,
+            "y": 0
+          },
+          "nodeIndex": "_ Fact_Cars",
+          "nodeLineageTag": "dabb4825-14fe-420e-b81d-04b054a3792e",
+          "size": {
+            "height": 1000,
+            "width": 234
+          },
+          "zIndex": 2
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 68.347826086956516,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

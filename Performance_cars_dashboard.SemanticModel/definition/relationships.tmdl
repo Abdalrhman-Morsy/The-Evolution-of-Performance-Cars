@@ -1,0 +1,43 @@
+relationship AutoDetected_8e45bb06-fa93-4d76-b03f-0fb82862b645
+	fromColumn: '_ Fact_Cars'.'Engine Tech ID'
+	toColumn: 'Dim Engine Tech'.'Engine Tech ID'
+
+relationship AutoDetected_48d5fc03-a300-4cf4-b953-f7fbe92946d5
+	fromColumn: '_ Fact_Cars'.'Engine Type ID'
+	toColumn: 'Dim Engine Type'.'Engine Type ID'
+
+relationship AutoDetected_40851648-2b2c-438c-8cfb-979ed74aab24
+	fromColumn: '_ Fact_Cars'.'Class ID'
+	toColumn: 'Dim Class'.'Class ID'
+
+relationship 92a8283a-acf0-be40-5cc1-447fd4735f8f
+	fromColumn: '_ Fact_Cars'.'Layout ID'
+	toColumn: 'Dim Layout'.'Layout ID'
+
+relationship 2552865f-4902-da89-6eb1-77f1eb1c495a
+	fromColumn: '_ Fact_Cars'.'Body ID'
+	toColumn: 'Dim Body'.'Body ID'
+
+relationship AutoDetected_6c56c6e4-b163-4343-b65f-cc0ddb937bd0
+	fromColumn: '_ Fact_Cars'.'Brand ID'
+	toColumn: 'Dim Brands'.'Brand ID'
+
+relationship ed42477d-60bb-6d42-5b92-5ff21f6eeea1
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: Transmissions_bridge.'Transmission Config ID'
+	toColumn: '_ Fact_Cars'.'Transmission Config ID'
+
+relationship 19ea98e7-1f1b-3163-10bb-56a650b7573a
+	fromColumn: Transmissions_bridge.'Transmission ID'
+	toColumn: 'Dim Transmissions'.'Transmission ID'
+
+relationship fddbf6b2-46ec-4092-997e-7696e8246f37
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Date.Date
+	toColumn: LocalDateTable_28fa9c85-fcf9-4fc3-9a86-bdfaee032904.Date
+
+relationship 20057977-a510-c2f7-140d-aef6fd7292d4
+	fromColumn: '_ Fact_Cars'.'Production Start'
+	toColumn: Date.Date
+

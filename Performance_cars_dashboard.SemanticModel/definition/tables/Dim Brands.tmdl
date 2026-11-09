@@ -1,0 +1,68 @@
+table 'Dim Brands'
+	lineageTag: 900ffe3a-a137-4655-8d11-05eafb336f33
+
+	column 'Brand ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2e59a006-0e8c-43e5-be7f-9a00e34773f2
+		summarizeBy: none
+		sourceColumn: Brand ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column foundation
+		dataType: string
+		lineageTag: a3d3caf4-36aa-4cbb-8749-32b6485648d8
+		summarizeBy: none
+		sourceColumn: foundation
+
+		annotation SummarizationSetBy = Automatic
+
+	column country
+		dataType: string
+		lineageTag: e3821f67-8ddf-4fc2-9797-0e020bd225b6
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brand
+		dataType: string
+		lineageTag: b04e52cd-e489-484e-90ca-d3173a0a2152
+		summarizeBy: none
+		sourceColumn: Brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column Logo
+		dataType: string
+		lineageTag: 6f17935c-ba23-4bfa-ad6b-b49e7e2a9942
+		dataCategory: ImageUrl
+		summarizeBy: none
+		sourceColumn: Logo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Flag
+		dataType: string
+		lineageTag: 68f8135e-f79f-4558-95e9-08bd5e108818
+		dataCategory: ImageUrl
+		summarizeBy: none
+		sourceColumn: Flag
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dim Brands' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Documents\Data Analysis\projects\super cars project\brands.csv"),[Delimiter=",", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Use First Row as Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Use First Row as Headers",{{"Brand ID", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
